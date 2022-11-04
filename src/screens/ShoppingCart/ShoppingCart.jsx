@@ -1,3 +1,3 @@
 export const ShoppingCart = () => {
-    return <h1>Hi!</h1>
+    return <h1>Shopping Cart</h1>
 }
