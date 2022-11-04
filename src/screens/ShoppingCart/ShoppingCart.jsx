@@ -1,3 +1,9 @@
 export const ShoppingCart = () => {
-    return <h1>Shopping Cart</h1>
+    return (
+        <center>
+            <h1>Página do Shopping Cart</h1>
+        </center>
+
+    
+    )
 }

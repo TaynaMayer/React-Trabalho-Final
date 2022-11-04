@@ -1,7 +1,17 @@
+import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { api } from '../../api';
 
 export const Cards = () => {
+
+console.log("fora cima");
+  useEffect(()=>{
+    console.log('useEffect');
+  }, []);
+  console.log("fora baixo");
+
+
     return (
         <Card style={{ 
             width: '18rem',
@@ -9,12 +19,12 @@ export const Cards = () => {
             margin: '20px',
             marginTop: '75px'
         }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+
+          <Card.Img variant="top" src="https://ecommerce-api-penguin.herokuapp.com/produto/1/foto" />
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>Cadeira bx9</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            cadeira ergonomica confortavel
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
