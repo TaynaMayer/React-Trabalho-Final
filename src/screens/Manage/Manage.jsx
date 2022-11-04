@@ -1,3 +1,9 @@
 export const Manage = () => {
-    return <h1>Manage</h1>
+    return (
+        <center>
+            <h1>Página do Manage</h1>
+        </center>
+
+    
+    )
 }
