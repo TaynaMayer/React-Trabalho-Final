@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import { api } from '../../api';
 
 export const Cards = () => {
@@ -26,7 +27,10 @@ console.log("fora cima");
             <Card.Text>
             cadeira ergonomica confortavel
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+          {/* <Button>
+          </Button> */}
+           <Link to={"/DetalheProduto"}>Comprar</Link>  
+
           </Card.Body>
         </Card>
     );
