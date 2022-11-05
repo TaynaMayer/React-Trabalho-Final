@@ -7,7 +7,7 @@ import { Header } from './components/Header/Header';
 import { Manage } from './screens/Manage/Manage';
 import { ShoppingCart } from './screens/ShoppingCart/ShoppingCart';
 import { DetalheProduto } from './screens/DetalheProduto';
-//import { Footer } from './components/Footer/Footer';  
+import { Footer } from './components/Footer/Footer';  
 
 
 function App() {
@@ -16,15 +16,13 @@ function App() {
     
     <BrowserRouter>
       <Header/>
-      {/* <Footer/> */}
-
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Manage" element={<Manage />} />
       <Route path="/ShoppingCart" element={<ShoppingCart />} />
-      <Route path="/DetalheProduto" element={<DetalheProduto />} />
+      <Route path="/DetalheProduto/:id" element={<DetalheProduto />} />
     </Routes>
-
+      <Footer/>
     </BrowserRouter>
   ) 
 }
