@@ -23,19 +23,25 @@ export const Cards = () => {
             <Card style={{ 
               width: '18rem',
               margin: '20px',
-              marginTop: '75px'
+              marginTop: '75px',
+              float: 'left'
+              
+
           }}>
           
             <Card.Img variant="top" src={produto.fotoLink} />
             <Card.Body>
+              
               <Card.Title>{produto.nome}</Card.Title>
               <Card.Text>{produto.descricao}</Card.Text>
               <Card.Text>R${produto.valor}</Card.Text>
+
             {/* <Button>
             </Button> */}
              <Link to={"/DetalheProduto"}>Comprar</Link>  
   
             </Card.Body>
+            
           </Card>)
             
       } ) }

@@ -7,12 +7,10 @@ import './Home.css';
 export const Home = () => {
     return (
         <>
-           
-
             <BodyContainer>
                 <Cards />
             </BodyContainer>
-            <Footer />
+           
         </>
     );
 }

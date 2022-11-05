@@ -7,6 +7,7 @@ import { Header } from './components/Header/Header';
 import { Manage } from './screens/Manage/Manage';
 import { ShoppingCart } from './screens/ShoppingCart/ShoppingCart';
 import { DetalheProduto } from './screens/DetalheProduto';
+//import { Footer } from './components/Footer/Footer';  
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     
     <BrowserRouter>
       <Header/>
+      {/* <Footer/> */}
 
     <Routes>
       <Route path="/" element={<Home />} />
