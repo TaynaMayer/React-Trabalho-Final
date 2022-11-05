@@ -1,3 +1,4 @@
+import { Col, Row } from "react-bootstrap";
 import { BodyContainer } from "../../components/BodyContainer/BodyContainer";
 import { Cards } from "../../components/Cards/Cards";
 import { Footer } from "../../components/Footer/Footer";
@@ -8,9 +9,11 @@ export const Home = () => {
     return (
         <>
             <BodyContainer>
-                <Cards />
+                <Row>
+                    <Cards />
+                </Row>
+                
             </BodyContainer>
-           
         </>
     );
 }

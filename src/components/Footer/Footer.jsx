@@ -5,6 +5,7 @@ export const Footer = () => {
             backgroundColor: '#212529',
             clear: 'both',
         }}>
+            ajosjdnaosdji
         </div>
     )
 }
