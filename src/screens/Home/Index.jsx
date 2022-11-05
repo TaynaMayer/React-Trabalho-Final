@@ -11,17 +11,6 @@ export const Home = () => {
 
             <BodyContainer>
                 <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
             </BodyContainer>
             <Footer />
         </>
