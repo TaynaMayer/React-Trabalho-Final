@@ -12,6 +12,7 @@ import {
 import { Home } from '../../screens/Home/Index'
 import { Manage } from '../../screens/Manage/Manage'
 import { ShoppingCart } from '../../screens/ShoppingCart/ShoppingCart'
+import { DetalheProduto } from '../../screens/DetalheProduto';
 
 export const Header = () => {
     return (
@@ -20,7 +21,7 @@ export const Header = () => {
         <>
          <Navbar bg="dark" variant="dark">
           <Container>
-              <Navbar.Brand href="#home">ECOMMERCE</Navbar.Brand>
+              <Navbar.Brand href="/">ECOMMERCE</Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                 <Nav.Link as={Link} to={"/Manage"}>Manage</Nav.Link>
