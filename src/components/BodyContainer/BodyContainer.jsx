@@ -1,7 +1,7 @@
 export const BodyContainer = (props) => {
     return (
         <div style={{
-            width: "1000px",
+            width: "900px",
             margin: "auto"
         }}>
             {props.children}

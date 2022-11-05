@@ -1,5 +1,11 @@
 .link{
     font-size: 1rem;
-    background-color: blue;
+    background-color:black;
     background: fixed;
+
+    
+}
+
+.img,svg {
+  height: 600px;  
 }
