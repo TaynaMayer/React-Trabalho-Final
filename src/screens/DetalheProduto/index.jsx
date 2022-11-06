@@ -5,11 +5,19 @@ import { useParams } from "react-router-dom";
 import { BodyContainer } from '../../components/BodyContainer/BodyContainer'
 import './DetalheProduto.css'
 
+//import { CartContext } from "../../context/Carrinho"
+import { BotaoAdicionarCarrinho } from "../../components/Button/ButtonAddItensCarrinho/ButtonAddItensCarrinho";
+
+
+
 export const DetalheProduto = () => {
+    //const { cart, addItem, removeItem, clearCart } = useContext(CartContext)
+
     const {id} = useParams();
     console.log(id);
 
     const [produto, setProduto] = useState([]);
+
     useEffect(() => {
     api
       .get(`/produto/${id}`)
@@ -39,7 +47,9 @@ export const DetalheProduto = () => {
                         <i className="bi bi-star-fill"></i>
                         
                         <div className="botao">
-                            <Button variant="success" size="lg">Comprar <i className="bi bi-bag-check"></i></Button>{' '}
+                            <BotaoAdicionarCarrinho produto={produto}/> 
+                            
+                        
                         </div>
                     </div>
                 </Col>

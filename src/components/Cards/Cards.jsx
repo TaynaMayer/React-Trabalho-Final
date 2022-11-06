@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { api } from '../../api';
 import React, { useEffect, useState } from "react";
 import { Col } from 'react-bootstrap';
-import './Style.css'; 
+import './Style.css';
 
 export const Cards = () => {
   const [produtos, setProduto] = useState([]);
@@ -57,5 +57,6 @@ export const Cards = () => {
       } ) }
         </>   
     );
+
 
 }
