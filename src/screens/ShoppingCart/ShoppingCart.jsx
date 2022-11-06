@@ -9,7 +9,7 @@ import './ShoppingCart.css'
 export const ShoppingCart = () => {
 
     const { cart, removeItem, clearCart, valorTotal, finalizarCompra } = useContext(CartContext)
-
+    //t
     console.log(cart);
     return (
         <div>
@@ -18,18 +18,13 @@ export const ShoppingCart = () => {
 
     
             <button 
-            
             onClick={finalizarCompra}
             >
-            finalizarCompra
-            
+            Finalizar Compra <i className="bi bi-check-lg"></i>
             </button>
-            valorTotal:R${valorTotal},00
+            ‎ ‎ ‎ ‎ ‎ ‎ ⠀Valor total Produtos:R${valorTotal},00⠀
             </div>
             
-        </div>
-            
-
-        
+        </div>   
     )
 }
