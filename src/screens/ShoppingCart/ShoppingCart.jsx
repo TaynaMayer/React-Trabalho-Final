@@ -9,7 +9,7 @@ import './ShoppingCart.css'
 export const ShoppingCart = () => {
 
     const { cart, removeItem, clearCart, valorTotal, finalizarCompra } = useContext(CartContext)
-
+    //t
     console.log(cart);
     return (
         <div>
