@@ -8,6 +8,7 @@ import { Manage } from './screens/Manage/Manage';
 import { ShoppingCart } from './screens/ShoppingCart/ShoppingCart';
 import { DetalheProduto } from './screens/DetalheProduto';
 import { Footer } from './components/Footer/Footer';  
+import { CartProvider } from './context/Carrinho';
 
 
 function App() {
@@ -15,14 +16,18 @@ function App() {
   return(
     
     <BrowserRouter>
+    <CartProvider>
       <Header/>
+      
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Manage" element={<Manage />} />
-      <Route path="/ShoppingCart" element={<ShoppingCart />} />
+      <Route path="/ShoppingCart/" element={<ShoppingCart />} />
       <Route path="/DetalheProduto/:id" element={<DetalheProduto />} />
     </Routes>
+    
       <Footer/>
+      </CartProvider>
     </BrowserRouter>
   ) 
 }
