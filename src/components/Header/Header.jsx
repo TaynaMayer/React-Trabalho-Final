@@ -25,7 +25,7 @@ export const Header = () => {
               <Nav className="me-auto">
                 <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                 <Nav.Link as={Link} to={"/Manage"}>Manage</Nav.Link>
-                <Nav.Link as={Link} to={"/ShoppingCart"}><i className="bi bi-cart"></i></Nav.Link>
+                <Nav.Link as={Link} to={"/ShoppingCart"}>Cart <i className="bi bi-cart4"></i></Nav.Link>
               </Nav>
             </Container>
           </Navbar>
