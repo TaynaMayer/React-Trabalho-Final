@@ -12,7 +12,6 @@ export const Home = () => {
                 <Row>
                     <Cards />
                 </Row>
-                
             </BodyContainer>
         </>
     );

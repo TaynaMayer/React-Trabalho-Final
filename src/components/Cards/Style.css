@@ -1,15 +1,4 @@
-.link{
-    font-size: 1rem;
-    background-color:black;
-    background: fixed;
-
-    
-}
-
-.img,svg {
-  height: 600px;  
-}
-
-.corbotao{
-  color: aliceblue;
+.card-img-top {
+    height: 275px;
+    padding: 10px;
 }
