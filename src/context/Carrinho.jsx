@@ -4,49 +4,28 @@ import { useState, useEffect } from 'react'
 
 export const CartContext = createContext()
 export const CartProvider = ({ children }) => {
-  const [precoTotal, setPrecoTotal] = useState()
+ // const [precoTotal, setPrecoTotal] = useState()
+ 
+  const [valorTotal, setValorTotal] = useState(0);
   const [cart, setCart] = useState([])
 
-  const [valorTotal, setValorTotal] = useState(0);
+  function finalizarCompra() {
 
-    function finalizarCompra(){
+    let soma = 0
+    for (let index = 0; index < cart.length; index++) {
 
-        let soma = 0
-        for (let index = 0; index < cart.length; index++) {
-            
-            soma = soma + cart[index].valor;
-            
-        } 
-
-
-           
-       
-        setValorTotal(soma);
-
-        
-       
-        console.log(valorTotal);
-
-
+      soma = soma + cart[index].valor;
     }
 
-  /*useEffect(() => {
-    let soma = 0
-    cart.map(produto => {
-      soma = soma + Number(produto.valor)
-    })
-
-    console.log(cart)
-    setPrecoTotal(soma)
-  }, [cart])
-
-  function addItem(produto) {
+    setValorTotal(soma);
+    console.log(valorTotal);
+  }
+  function addItem(item) {
     const aux = cart
-    aux.push(produto)
+    aux.push(item)
     setCart(aux)
     console.log(cart)
-  }*/
-
+  }
   function removeItem(id) {
     // const filteredCart = cart.filter((item) => item.id !== id);
     // setCart(filteredCart);
@@ -58,14 +37,10 @@ export const CartProvider = ({ children }) => {
     console.log(cart)
   }
 
-  function clearCart() {
-    setCart([])
-    console.log(cart)
-  }
 
   return (
     <CartContext.Provider
-      value={{ cart,setCart, removeItem, clearCart, valorTotal, finalizarCompra }}
+      value={{ cart, addItem, setCart, removeItem, valorTotal, finalizarCompra }}
     >
       {children}
     </CartContext.Provider>

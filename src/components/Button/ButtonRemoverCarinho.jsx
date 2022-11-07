@@ -1,10 +1,11 @@
-
 import React, { useState, useEffect, useContext } from 'react'
-import { CartItensContext } from "../../context/Carrinho"
-import './style.css'
+import { CartContext } from '../../context/Carrinho'
+//import { CartItensContext } from "../../context/Carrinho"
+
 
 export const BotaoRemoverCarrinho = ({ produto }) => {
-  const { cart, addItem, removeItem, clearCart } = useContext(CartItensContext)
+  
+  const { cart, removeItem } = useContext(CartContext)
   console.log(produto.id)
   return (
     <>
