@@ -1,5 +1,5 @@
 import React, { useState, useParams } from "react";
-import { BotaoRemoverCarrinho } from "../Button/ButtonRemoverCarinho";
+import { BotaoRemoverCarrinho } from "../Button/ButtonRemoverCarrinho/ButtonRemoverCarrinho";
 import { CardCarrinhoContainer, CardCarrinho, TopCardCarrinho, TopCardCarrinhoImage, BottomCardCarrinho } from "./StyleCardCarrinho";
 
 
