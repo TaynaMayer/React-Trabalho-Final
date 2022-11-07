@@ -7,7 +7,7 @@ export const Footer = () => {
 
 <footer className="text-center text-lg-start bg-white text-muted">
 
-            <section className="">
+            <section className="fundo">
                 
                     <div className="container text-center text-md-start mt-5">
 
@@ -66,12 +66,12 @@ export const Footer = () => {
                         </div>
 
                     </div>
-                </section>
 
                 <div className="text-center p-4">
                     © 2022 Copyright:
                     <a className="text-reset fw-bold" target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.html">EcomSerratec.com</a>
                 </div>              
+                </section>
             </footer>    
   
   )

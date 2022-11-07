@@ -46,8 +46,8 @@ export const Cards = () => {
                   
                   <Card.Title>{produto.nome}</Card.Title>
                   <Card.Text>{produto.descricao}</Card.Text>
-                  <Card.Text>R${produto.valor}</Card.Text>
-                  <Button variant="success"><Link style={{color:'#FFF'}} to={`/DetalheProduto/${produto.id}`}>Comprar</Link></Button>{' '}
+                  <Card.Text>R${produto.valor}</Card.Text>               
+                  <Button variant="primary"><Link style={{color:'#FFF'}} to={`/DetalheProduto/${produto.id}`}>Comprar</Link></Button>{' '}
                   
                 </Card.Body>
                 
