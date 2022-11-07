@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
   function removeItem(id) {
     // const filteredCart = cart.filter((item) => item.id !== id);
     // setCart(filteredCart);
-    alert("Produto removido!")
+    
     for (var i = 0; i < cart.length; i++) {
       if (cart[i] === id) {
         cart.splice(i, 1)
