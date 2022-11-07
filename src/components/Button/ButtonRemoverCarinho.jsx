@@ -6,6 +6,7 @@ import { CartContext } from '../../context/Carrinho'
 export const BotaoRemoverCarrinho = ({ produto }) => {
   
   const { cart, removeItem } = useContext(CartContext)
+  
   console.log(produto.id)
   return (
     <>

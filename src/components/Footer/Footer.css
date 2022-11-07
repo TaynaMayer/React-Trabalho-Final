@@ -8,5 +8,9 @@
     margin-left: calc(-0.5 * var(--bs-gutter-x));
 
   }
+
+  .fundo {
+    background-color: #e3e3e3;
+  }
  
  

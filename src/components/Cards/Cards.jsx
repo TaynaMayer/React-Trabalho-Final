@@ -30,6 +30,7 @@ export const Cards = (props) => {
                   <Card.Text>{produto.descricao}</Card.Text>
                   <Card.Text>R${produto.valor}</Card.Text>
                   <Button variant="success"><Link style={{color:'#FFF'}} to={`/DetalheProduto/${produto.id}`}>Comprar</Link></Button>{' '}
+
                 </Card.Body>
               </StyleCard>
               </Col>
