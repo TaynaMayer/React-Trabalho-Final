@@ -14,14 +14,16 @@ import { Home } from '../../screens/Home/Index'
 import { Manage } from '../../screens/Manage/Manage'
 import { ShoppingCart } from '../../screens/ShoppingCart/ShoppingCart'
 import { DetalheProduto } from '../../screens/DetalheProduto';
+import { Col } from 'react-bootstrap';
 
 export const Header = () => {
     return (
       
       
-        <>
+        <Col md="8" sm= "12" lg= "12" xl= "12">
+        <>        
          <Navbar bg="dark" variant="dark">
-          <Container>
+          <Container >
               <Navbar.Brand href="/">EcomSerratec</Navbar.Brand>
               <Nav className="me-auto">
                <li><Nav.Link as={Link} to={"/"}>Home</Nav.Link></li>
@@ -33,5 +35,6 @@ export const Header = () => {
             </Container>
           </Navbar>
         </>
+        </Col>        
     );
 }

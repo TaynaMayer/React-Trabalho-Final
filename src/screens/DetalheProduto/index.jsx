@@ -30,13 +30,13 @@ export const DetalheProduto = () => {
     return (
         <BodyContainer>
             <Row>
-                <Col>
+                <Col md="8" sm= "12" lg= "8" xl= "6">
                     <div className="esquerda">
                         <img src={produto.fotoLink} />
                     </div>
                 </Col>
 
-                <Col>
+                <Col md="8" sm= "12" lg= "6" xl= "6">
                     <div className="direita">
                         <h1>{produto.nome}</h1>
                         <p>{produto.descricao}</p>

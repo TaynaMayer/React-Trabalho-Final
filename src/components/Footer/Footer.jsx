@@ -6,14 +6,16 @@ export const Footer = () => {
   return (
 
 <footer className="text-center text-lg-start bg-white text-muted">
+    
 
             <section className="fundo">
+                
                 
                     <div className="container text-center text-md-start mt-5">
 
                         <div className="mt-3 row_footer">
 
-                            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <div className="col-md-4 col-lg-2 col-xl-3 mx-auto mb-4">
 
                                 <h6 className="text-uppercase fw-bold mb-4">
                                    Ecomserratec
@@ -39,7 +41,7 @@ export const Footer = () => {
                                 </p>
                             </div>
 
-                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
                                 <h6 className="text-uppercase fw-bold mb-4">
                                     Obrigações
@@ -55,7 +57,7 @@ export const Footer = () => {
                                 </p>
                             </div>
 
-                            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <div className="col-md-5 col-lg-6 col-xl-3 mx-auto mb-md-0 mb-4">
                             
                                 <h6 className="text-uppercase fw-bold mb-4"> Contato</h6>
                                 <p><i className="fas fa-home me-3 text-secondary"></i> Rua Galvão Bueno, N° 47 - São Paulo</p>
