@@ -9,17 +9,26 @@ export const BotaoAdicionarCarrinho = ({ produto }) => {
   function adc(produto) {
 
     setCart([...cart, produto])
+    alert("Produto adicionado ao carrinho!")
     console.log(cart)
   }
 
+  function mensagem (){
+    
+  }
+      
+
   return (
     <>
-    <div>
-      
-      <button className="bi bi-bag-check" onClick={() => adc(produto)}>
-        <strong> Adicionar ao Carrinho</strong>
-      </button>
+      <div>
+
+        <button className="bi bi-bag-check" onClick={() => adc(produto)} >
+          <strong> Adicionar ao Carrinho</strong>
+        </button>
+        
+        
       </div>
+      
     </>
   )
 }
