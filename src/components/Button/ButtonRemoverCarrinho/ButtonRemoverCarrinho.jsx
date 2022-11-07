@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { CartContext } from '../../context/Carrinho'
+import { CartContext } from '../../../context/Carrinho'
 //import { CartItensContext } from "../../context/Carrinho"
 
 
