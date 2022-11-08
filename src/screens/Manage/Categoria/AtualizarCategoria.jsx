@@ -35,7 +35,8 @@ export const UpdateCategoria = () => {
 
   return (
     <>
-      <h1>Atualizar Categorias</h1>
+      <h2 className="centralizar">Atualizar Categorias <i class="bi bi-arrow-repeat"></i></h2>
+      <div className="meio">
       <Form onSubmit={(e) => atualizar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
@@ -63,9 +64,11 @@ export const UpdateCategoria = () => {
                     setNome(e.target.value);
                     }}       
                 />
+                <br></br>
         </Form.Group>
         <Button type="submit">Atualizar</Button>
       </Form>
+      </div>
     </>
   );
 };
