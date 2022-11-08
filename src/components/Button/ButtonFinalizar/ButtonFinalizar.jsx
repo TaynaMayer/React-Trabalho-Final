@@ -1,28 +1,21 @@
-import React, {useState} from "react";
+// import React, {useState} from "react";
 
-export const ButtonFinalizar = () => {
+// export const ButtonFinalizar = () => {
     
-    const [valorTotal, setValorTotal] = useState(0);
+//     const [valorTotal, setValorTotal] = useState(0);
 
-    function finalizarCompra(){
+//     function finalizarCompra(){
+//         cart.map(produto => {
+//             setValorTotal(valorTotal + produto.valor);
+//         })
+//         return valorTotal;
+//     }
 
-        cart.map(produto => {
-
-            setValorTotal(valorTotal + produto.valor);
-        })
-
-        return
-        valorTotal
-        console.log();
-
-
-    }
-
-    return(
-        <>
-        <button onClick={() => finalizarCompra(produto)}>
-          <strong>Finalizar compra</strong>
-        </button>
-      </>
-    )
-}
+//     return(
+//         <>
+//         <button onClick={() => finalizarCompra(produto)}>
+//           <strong>Finalizar compra</strong>
+//         </button>
+//       </>
+//     )
+// }

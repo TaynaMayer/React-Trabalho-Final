@@ -22,14 +22,14 @@ export const CarrinhoCards = (props) => {
                         <BottomCardCarrinho>
                             <span>{produto.nome}</span>
                             <span>R${produto.valor}</span>
-                            <BotaoRemoverCarrinho produto={produto}>dasdasd</BotaoRemoverCarrinho>
+                            <BotaoRemoverCarrinho produto={produto} />
                         </BottomCardCarrinho>
                     </CardCarrinho>
                 ))}
             </CardCarrinhoContainer>
 
             <div className="BotaoFinalizar">
-                <p>Valor total Produtos: R${valorTotal},00</p>
+                <p>Valor total Produtos: R${valorTotal}</p>
                 <button onClick={finalizarCompra}>
                     Finalizar Compra <i className="bi bi-check-lg"></i>
                 </button>
