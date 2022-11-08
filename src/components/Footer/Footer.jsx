@@ -15,9 +15,9 @@ export const Footer = () => {
 
                         <div className="mt-3 row_footer">
 
-                            <div className="col-md-2 col-lg-2 col-xl-3 mx-auto mb-4">
+                            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
-                                <h6 className="text-uppercase fw-bold mb-4">
+                                <h6 className="text-center text-uppercase fw-bold mb-4">
                                    Ecomserratec
                                 </h6>
                                 <p>
@@ -27,7 +27,7 @@ export const Footer = () => {
                             </div>
 
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <h6 className="text-uppercase fw-bold mb-4">
+                                <h6 className="text-center text-uppercase fw-bold mb-4">
                                     Produtos
                                 </h6>
                                 <p>
@@ -41,9 +41,9 @@ export const Footer = () => {
                                 </p>
                             </div>
 
-                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
-                                <h6 className="text-uppercase fw-bold mb-4">
+                                <h6 className="text-center text-uppercase fw-bold mb-4">
                                     Obrigações
                                 </h6>
                                 <p>
@@ -57,9 +57,9 @@ export const Footer = () => {
                                 </p>
                             </div>
 
-                            <div className="col-md-5 col-lg-6 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                             
-                                <h6 className="text-uppercase fw-bold mb-4"> Contato</h6>
+                                <h6 className="text-center text-uppercase fw-bold mb-4"> Contato</h6>
                                 <p><i className="fas fa-home me-3 text-secondary"></i> Rua Galvão Bueno, N° 47 - São Paulo</p>
                                 <p><i className="fas fa-envelope me-3 text-secondary"></i> ecomserratec@gmail.com</p>
                                 <p><i className="fas fa-phone me-3 text-secondary"></i> (11) 9 9657-9172</p>
