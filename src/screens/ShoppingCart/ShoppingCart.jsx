@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/Carrinho"
 import { Cards } from "../../components/Cards/Cards";
 import { CarrinhoCards } from "../../components/CardCarrinho/CardCarrinho";
-import { ButtonFinalizar } from "../../components/Button/ButtonFinalizar/ButtonFinalizar";
+// import { ButtonFinalizar } from "../../components/Button/ButtonFinalizar/ButtonFinalizar";
 import './ShoppingCart.css'
 
 

@@ -4,23 +4,23 @@ import { useState, useEffect } from 'react'
 
 export const CartContext = createContext()
 export const CartProvider = ({ children }) => {
-  // const [precoTotal, setPrecoTotal] = useState()
  
   const [valorTotal, setValorTotal] = useState(0);
   const [cart, setCart] = useState([])
 
+
   function finalizarCompra() {
-    
-    let soma = 0
-    for (let index = 0; index < cart.length; index++) {
-
-      soma = soma + cart[index].valor;
-    }
-
-    setValorTotal(soma);
+    console.log(soma);
+    alert("Compra finalizada com sucesso!")
   }
 
   function addItem(item) {
+    let soma = 0
+    for (let index = 0; index < cart.length; index++) {
+      soma = soma + cart[index].valor;
+    }
+    setValorTotal(soma);
+
     const aux = cart
     aux.push(item)
     setCart(aux)
