@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react'
 
 export const CartContext = createContext()
 export const CartProvider = ({ children }) => {
- // const [precoTotal, setPrecoTotal] = useState()
+  // const [precoTotal, setPrecoTotal] = useState()
  
   const [valorTotal, setValorTotal] = useState(0);
   const [cart, setCart] = useState([])
 
   function finalizarCompra() {
-
+    
     let soma = 0
     for (let index = 0; index < cart.length; index++) {
 
@@ -18,26 +18,23 @@ export const CartProvider = ({ children }) => {
     }
 
     setValorTotal(soma);
-    console.log(valorTotal);
   }
+
   function addItem(item) {
     const aux = cart
     aux.push(item)
     setCart(aux)
-    console.log(cart)
-  }
-  function removeItem(id) {
-    // const filteredCart = cart.filter((item) => item.id !== id);
-    // setCart(filteredCart);
-    
-    for (var i = 0; i < cart.length; i++) {
-      if (cart[i] === id) {
-        cart.splice(i, 1)
-      }
-    }
-    console.log(cart)
+    alert("Produto adicionado ao carrinho!");
+
   }
 
+  function removeItem(id) {
+    for (var i = 0; i < cart.length; i++) {
+      if (cart[i] === id) {
+        cart.splice(i, 1);
+      }
+    }
+  }
 
   return (
     <CartContext.Provider
@@ -45,5 +42,5 @@ export const CartProvider = ({ children }) => {
     >
       {children}
     </CartContext.Provider>
-  )
+  );
 }
