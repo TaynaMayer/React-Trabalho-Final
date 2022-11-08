@@ -10,16 +10,17 @@ export const CartProvider = ({ children }) => {
 
 
   function finalizarCompra() {
-    console.log(soma);
-    alert("Compra finalizada com sucesso!")
-  }
-
-  function addItem(item) {
     let soma = 0
     for (let index = 0; index < cart.length; index++) {
       soma = soma + cart[index].valor;
     }
     setValorTotal(soma);
+    
+    alert("Compra finalizada com sucesso!")
+  }
+
+  function addItem(item) {
+    
 
     const aux = cart
     aux.push(item)
