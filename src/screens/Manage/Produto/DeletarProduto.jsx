@@ -3,10 +3,9 @@ import { Button, Form } from "react-bootstrap";
 import {api} from "../../../api";
 
 
-export const Deleta = () => {
+export const DeleteProduto = () => {
   const [listaClientes, setListaClientes] = useState([]);
   const [id, setId] = useState();
-  const [form,setForm] = useState("");
   const[cpf,setCPF] = useState("");
   const[dataNascimento,setDataNascimento] = useState("");
   const[email,setEmail] = useState("");
@@ -54,7 +53,7 @@ export const Deleta = () => {
            },
            nome:nome,
            usuario});
-           alert("Usuário cadastrado com sucesso")
+           
       } catch (err) {
         console.log(err);
       }
@@ -81,4 +80,5 @@ export const Deleta = () => {
     </>
   );
 };
+export default DeleteProduto;
  

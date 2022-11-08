@@ -1,12 +1,10 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
 
-export const Atualiza = () => {
+export const UpdateCliente = () => {
     const [listaClientes, setListaClientes] = useState([]);
     const [id, setId] = useState();
-    const [form,setForm] = useState("");
     const[cpf,setCPF] = useState("");
     const[dataNascimento,setDataNascimento] = useState("");
     const[email,setEmail] = useState("");
@@ -52,7 +50,7 @@ export const Atualiza = () => {
            },
            nome:nome,
            usuario});
-           alert("Usuário cadastrado com sucesso")
+      
       } catch (err) {
         console.log(err);
       }
@@ -60,7 +58,7 @@ export const Atualiza = () => {
 
   return (
     <>
-      <h1>Atualizar cliente</h1>
+      <h1>Atualizar Cliente</h1>
       <Form onSubmit={(e) => atualizar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
@@ -197,3 +195,5 @@ export const Atualiza = () => {
     </>
   );
 };
+
+export default UpdateCliente;
