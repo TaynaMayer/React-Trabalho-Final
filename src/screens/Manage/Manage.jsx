@@ -3,14 +3,13 @@ import Button from '@material-ui/core/Button';
 import './Manage.css';
 export const Manage = () => {
     return (
-        <div>
+        <div className='card-box'>
         <h2 className='posicao'>Gerenciamento <i class="bi bi-gear"></i></h2>
             <div className='gerenciar'>
             <strong>Cliente</strong>
             <br/> 
             <span>Gerenciar Clientes</span>
-            <p>Aqui você pode adicionar, remover, ou deletar registros de clientes.</p>
-         
+            <p>Aqui você pode adicionar, remover, ou deletar registros de clientes.</p>         
             <Button variant="contained" component={Link} to="/CadastrarCliente">Criar</Button>
             <Button variant="contained" component={Link} to="/AtualizarCliente">Atualizar</Button>  
             <Button variant="contained" component={Link} to="/DeletarCliente">Deletar</Button>
