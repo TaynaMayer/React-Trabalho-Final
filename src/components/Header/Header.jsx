@@ -26,10 +26,10 @@ export const Header = () => {
           <Container >
               <Navbar.Brand href="/">EcomSerratec</Navbar.Brand>
               <Nav className="me-auto">
-               <li><Nav.Link as={Link} to={"/"}>Home</Nav.Link></li>
-               <li><Nav.Link as={Link} to={"/Manage"}>Manage</Nav.Link></li>  
+               <li id='pagina-principal'><Nav.Link as={Link} to={"/"}>Página Principal</Nav.Link></li>
+               <li><Nav.Link as={Link} to={"/Manage"}>Admin</Nav.Link></li>  
                <Nav className="carrinho">         
-               <li><Nav.Link as={Link} to={"/ShoppingCart"}>Cart <i className="bi bi-cart4"></i></Nav.Link></li>
+               <li><Nav.Link as={Link} to={"/ShoppingCart"}><i className="bi bi-cart4"></i></Nav.Link></li>
                </Nav>
               </Nav>
             </Container>

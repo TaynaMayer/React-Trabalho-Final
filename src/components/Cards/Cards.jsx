@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { api } from '../../api';
@@ -6,8 +5,9 @@ import React, { useEffect, useState } from "react";
 import { Col } from 'react-bootstrap';
 import './Style.css';
 import { StyleCard } from './Style';
+import { StyleButton } from '../Button/Style';
 
-export const Cards = (props) => {
+export const Cards = () => {
   const [produtos, setProduto] = useState([]);
   useEffect(() => {
     api
@@ -29,8 +29,14 @@ export const Cards = (props) => {
                   <Card.Title>{produto.nome}</Card.Title>
                   <Card.Text>{produto.descricao}</Card.Text>
                   <Card.Text>R${produto.valor}</Card.Text>
-                  <Button variant="success"><Link style={{color:'#FFF'}} to={`/DetalheProduto/${produto.id}`}>Comprar</Link></Button>{' '}
-
+                  <StyleButton
+                   padding='8px'
+                   width='100px'
+                   variant="success">
+                    <Link style={{color:'#FFF', textDecoration:'none'}} to={`/DetalheProduto/${produto.id}`}>
+                      Comprar
+                    </Link>
+                    </StyleButton>{' '}
                 </Card.Body>
               </StyleCard>
               </Col>
