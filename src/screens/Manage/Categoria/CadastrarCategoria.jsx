@@ -4,7 +4,7 @@ import { api } from "../../../api";
 
 export const CreateCategoria = () => {
   const [id, setId] = useState();
-  const[cpf,setCPF] = useState("");
+  const[descricao,setDescricao] = useState("");
   const[nome,setNome] = useState("");
 
   const cadastrar = (e) => {
@@ -13,7 +13,7 @@ export const CreateCategoria = () => {
       api.post("/categoria", {
         id: 0,
         descricao,        
-        nome:nome,});
+        nome,});
     
     } catch (err) {
       console.log(err);
@@ -25,12 +25,12 @@ export const CreateCategoria = () => {
       <h1>Adicionar Categoria</h1>
       <Form onSubmit={(e) => cadastrar(e)}>
         <Form.Group>
-          <Form.Label>CPF</Form.Label>
+          <Form.Label>Descrição</Form.Label>
                   <Form.Control
-                      value={cpf}
+                      value={descricao}
                       type="text"
                       onChange={(e) => {
-                        setCPF(e.target.value);
+                        setDescricao(e.target.value);
                       }}
                     />           
               <Form.Label>Nome</Form.Label>      

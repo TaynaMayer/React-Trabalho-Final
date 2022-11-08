@@ -3,39 +3,34 @@ import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
 
 export const CreateProduto = () => {
-    const [form,setForm] = useState("");
-    const[cpf,setCPF] = useState("");
-    const[dataNascimento,setDataNascimento] = useState("");
-    const[email,setEmail] = useState("");
-    const[bairro,setBairro] = useState("");
-    const[cep,setCep] = useState("");
-    const[cidade,setCidade] = useState("");
-    const[complemento,setComplemento] = useState("");
-    const[estado,setEstado] = useState("");
-    const[numero,setNumero] = useState("");
-    const[rua,setRua] = useState("");
-    const[nome,setNome] = useState("");
-    const[usuario,setUsuario] = useState("");
+  const [id, setId] = useState();
+  const[nome,setNome] = useState("");
+  const[dataFabricacao,setDataFabricacao] = useState("");
+  const[descricao,setDescricao] = useState("");
+  const[fotoLink,setFotoLink] = useState("");
+  const[qtdEstoque,setQTDEstoque] = useState();
+  const[valor,setValor] = useState();
+  const[idCategoria,setIdCategoria] = useState();
+  const[idFuncionario,setIdFuncionario] = useState();
+  const[nomeCategoria,setNomeCategoria] = useState("");
+  const[nomeFuncionario,setNomeFuncionario] = useState("");
   
 
   const cadastrar = (e) => {
     e.preventDefault();
     try {
       api.post("/cliente", {
-        cpf,
-        dataNascimento:dataNascimento,
-        email:email,
-        endereco:{
-            bairro,
-            cep, 
-            cidade,
-            complemento,
-            estado,
-            numero,
-            rua
-         },
-         nome:nome,
-         usuario});
+          dataFabricacao,
+          descricao,
+          fotoLink,
+          id:0,
+          idCategoria,
+          idFuncionario,
+          nome,
+          nomeCategoria,
+          nomeFuncionario,
+          qtdEstoque,
+          valor});
     } catch (err) {
       console.log(err);
     }
@@ -43,54 +38,64 @@ export const CreateProduto = () => {
 
   return (
     <>
-      <h1>Adicionar cliente</h1>
-      <Form onSubmit={(e) => cadastrar(e)}>
+      <h1>Adicionar Produto</h1>
+      <Form onSubmit={(e) => atualizar(e)}>
         <Form.Group>
-          <Form.Label>CPF</Form.Label>
+          <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
+            {listaProdutos.map((d) => {
+              return (
+                <option key={d.id} value={d.id}>
+                  {d.nome}
+                </option> 
+              );
+            })}
+          </Form.Control>
+
+          <Form.Label>Data de Fabricacao</Form.Label>
                   <Form.Control
-                      value={cpf}
-                      type="text"
+                      value={dataFabricacao}
+                      type="date"
                       onChange={(e) => {
-                        setCPF(e.target.value);
+                        setDataFabricacao(e.target.value);
                       }}
                     />
 
-                  <Form.Label>Data de Nascimento</Form.Label>
+                  <Form.Label>Descricao</Form.Label>
                     <Form.Control
-                        value={dataNascimento}
-                        type="date"
-                        onChange={(e) =>  {
-                        setDataNascimento(e.target.value);
-                        }}       
-                    />
-                  <Form.Label>Email</Form.Label>
-                    <Form.Control
-                        value={email}
+                        value={descricao}
                         type="text"
                         onChange={(e) =>  {
-                        setEmail(e.target.value);
+                        setDescricao(e.target.value);
+                        }}       
+                    />
+                  <Form.Label>Insira o link da foto do produto</Form.Label>
+                    <Form.Control
+                        value={fotoLink}
+                        type="text"
+                        onChange={(e) =>  {
+                        setFotoLink(e.target.value);
                         }}       
                     />
                 
             </Form.Group>
             <Form.Group>
                     
-                    <Form.Label>Bairro</Form.Label>
+                    <Form.Label>Insira o id da Categoria</Form.Label>
                     
                         <Form.Control
-                        value={bairro}
-                        type="text"
+                        value={idCategoria}
+                        type="number"
                         onChange={(e) =>  {
-                        setBairro(e.target.value);
+                        setIdCategoria(e.target.value);
                         }}       
                     />
-                    <Form.Label>CEP</Form.Label>
+                    <Form.Label>Insira o id do Funcionario</Form.Label>
                     
                         <Form.Control
-                        value={cep}
-                        type="text"
+                        value={idFuncionario}
+                        type="number"
                         onChange={(e) =>  {
-                        setCep(e.target.value);
+                        setIdFuncionario(e.target.value);
                         }}       
                     />
                     <Form.Label>Cidade</Form.Label>

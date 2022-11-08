@@ -16,6 +16,18 @@ export const CreateCliente = () => {
     const[nome,setNome] = useState("");
     const[usuario,setUsuario] = useState("");
   
+  const formatDataTime = (e) => {
+    let data = e.target.value;
+    data = new Date (data).toISOString();
+    setDataNascimento(data);
+  }
+
+  const receiveDataTime = () => {
+    let data = dataNascimento;
+    console.log(data);
+    data = new Date(data).toLocaleDateString();
+    setDataNascimento(data)
+  }
 
   const cadastrar = (e) => {
     e.preventDefault();
@@ -23,8 +35,8 @@ export const CreateCliente = () => {
       api.post("/cliente", {
         id:0,
         cpf,
-        dataNascimento:dataNascimento,
-        email:email,
+        dataNascimento,
+        email,
         endereco:{
             bairro,
             cep, 
@@ -34,7 +46,7 @@ export const CreateCliente = () => {
             numero,
             rua
          },
-         nome:nome,
+         nome,
          usuario});
     
     } catch (err) {
@@ -60,9 +72,7 @@ export const CreateCliente = () => {
                     <Form.Control
                         value={dataNascimento}
                         type="date"
-                        onChange={(e) =>  {
-                        setDataNascimento(e.target.value);
-                        }}       
+                        onChange={formatDataTime}    
                     />
                   <Form.Label>Email</Form.Label>
                     <Form.Control

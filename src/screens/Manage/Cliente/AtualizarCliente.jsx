@@ -37,8 +37,8 @@ export const UpdateCliente = () => {
       try {
         api.put(`/cliente/${id}`, {  
           cpf,
-          dataNascimento:dataNascimento,
-          email:email,
+          dataNascimento,
+          email,
           endereco:{
               bairro,
               cep, 
@@ -48,7 +48,7 @@ export const UpdateCliente = () => {
               numero,
               rua
            },
-           nome:nome,
+           nome,
            usuario});
       
       } catch (err) {

@@ -4,56 +4,41 @@ import {api} from "../../../api";
 
 
 export const DeleteProduto = () => {
-  const [listaClientes, setListaClientes] = useState([]);
+  const [listaProdutos, setListaProdutos] = useState([]);
   const [id, setId] = useState();
-  const[cpf,setCPF] = useState("");
-  const[dataNascimento,setDataNascimento] = useState("");
-  const[email,setEmail] = useState("");
-  const[bairro,setBairro] = useState("");
-  const[cep,setCep] = useState("");
-  const[cidade,setCidade] = useState("");
-  const[complemento,setComplemento] = useState("");
-  const[estado,setEstado] = useState("");
-  const[numero,setNumero] = useState("");
-  const[rua,setRua] = useState("");
   const[nome,setNome] = useState("");
-  const[usuario,setUsuario] = useState("");
+  const[dataFabricacao,setDataFabricacao] = useState("");
+  const[descricao,setDescricao] = useState("");
+  const[fotoLink,setFotoLink] = useState("");
+  const[qtdEstoque,setQTDEstoque] = useState();
+  const[valor,setValor] = useState();
   
   
 
     useEffect(() =>{
-    const getClientes = async () => {
+    const getProdutos = async () => {
       try{
-        const response = await api.get("/cliente");
-        setListaClientes(response.data)
+        const response = await api.get("/produto");
+        setListaProdutos(response.data)
       }catch(err){
         console.log(err);
       }
     }
-    getClientes()
+    getProdutos()
   },[])
 
-  console.log(listaClientes);
+  console.log(listaProdutos);
 
     const deletar = (e) => {
       e.preventDefault();
       try {
-        api.delete(`/cliente/${id}`, {  
-          cpf,
-          dataNascimento:dataNascimento,
-          email:email,
-          endereco:{
-              bairro,
-              cep, 
-              cidade,
-              complemento,
-              estado,
-              numero,
-              rua
-           },
-           nome:nome,
-           usuario});
-           
+        api.delete(`/produto/${id}`, {  
+          dataFabricacao,
+          descricao,
+          fotoLink,
+          nome,
+          qtdEstoque,
+          valor});
       } catch (err) {
         console.log(err);
       }
@@ -61,11 +46,11 @@ export const DeleteProduto = () => {
 
   return (
     <>
-      <h1>Deletar cliente</h1>
+      <h1>Deletar Produto</h1>
       <Form onSubmit={(e) => deletar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
-            {listaClientes.map((d) => {
+            {listaProdutos.map((d) => {
               return (
                 <option key={d.id} value={d.id}>
                   {d.nome}

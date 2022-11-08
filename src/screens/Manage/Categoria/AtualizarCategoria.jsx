@@ -6,6 +6,7 @@ export const UpdateCategoria = () => {
     const [listaCategorias, setListaCategorias] = useState([]);
     const [id, setId] = useState();
     const[descricao,setDescricao] = useState("");
+    const[nome,setNome] = useState("");
 
     useEffect(() =>{
     const getCategorias = async () => {
@@ -26,7 +27,7 @@ export const UpdateCategoria = () => {
       try {
         api.put(`/categoria/${id}`, {  
           descricao,        
-          nome:nome,
+          nome,
           });
         
       } catch (err) {
@@ -52,7 +53,7 @@ export const UpdateCategoria = () => {
                       value={descricao}
                       type="text"
                       onChange={(e) => {
-                        setCPF(e.target.value);
+                        setDescricao(e.target.value);
                       }}
                     />
               <Form.Label>Nome</Form.Label>                 

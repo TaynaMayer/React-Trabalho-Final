@@ -28,7 +28,7 @@ export const DeleteCategoria = () => {
       try {
         api.delete(`/categoria/${id}`, {  
           descricao,        
-          nome:nome,});
+          nome,});
            
       } catch (err) {
         console.log(err);

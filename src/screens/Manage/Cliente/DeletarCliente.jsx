@@ -42,8 +42,8 @@ export const DeleteCliente = () => {
       try {
         api.delete(`/cliente/${id}`, {  
           cpf,
-          dataNascimento:dataNascimento,
-          email:email,
+          dataNascimento,
+          email,
           endereco:{
               bairro,
               cep, 
@@ -53,7 +53,7 @@ export const DeleteCliente = () => {
               numero,
               rua
            },
-           nome:nome,
+           nome,
            usuario});
       
       } catch (err) {
