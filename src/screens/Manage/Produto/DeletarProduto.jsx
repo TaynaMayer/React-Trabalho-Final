@@ -1,6 +1,7 @@
 import {useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {api} from "../../../api";
+import './Style.css';
 
 
 export const DeleteProduto = () => {
@@ -61,7 +62,8 @@ export const DeleteProduto = () => {
 
   return (
     <>
-      <h1>Deletar cliente</h1>
+      <h2 className="centralizar">Deletar Produtos <i class="bi bi-x-circle"></i></h2>
+      <div className="meio">
       <Form onSubmit={(e) => deletar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
@@ -73,10 +75,12 @@ export const DeleteProduto = () => {
               );
             })}
           </Form.Control>
+          <br></br>
         </Form.Group>
 
         <Button type="submit">Deletar</Button>
       </Form>
+      </div>
     </>
   );
 };

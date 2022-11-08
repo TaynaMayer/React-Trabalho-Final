@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import './Style.css';
 
 export const CreateProduto = () => {
     const [form,setForm] = useState("");
@@ -43,7 +44,8 @@ export const CreateProduto = () => {
 
   return (
     <>
-      <h1>Adicionar cliente</h1>
+      <h2 className="centralizar">Adicionar Produtos <i class="bi bi-plus-circle"></i></h2>
+      <div className="meio">
       <Form onSubmit={(e) => cadastrar(e)}>
         <Form.Group>
           <Form.Label>CPF</Form.Label>
@@ -163,10 +165,11 @@ export const CreateProduto = () => {
                         }}       
                     />
 
-
+          <br></br>               
         </Form.Group>
         <Button type="submit">Cadastrar</Button>
       </Form>
+      </div>
     </>
   );
 };

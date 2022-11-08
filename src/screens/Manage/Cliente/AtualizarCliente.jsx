@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import './Style.css';
 
 export const UpdateCliente = () => {
+     
     const [listaClientes, setListaClientes] = useState([]);
     const [id, setId] = useState();
     const[cpf,setCPF] = useState("");
@@ -17,7 +19,7 @@ export const UpdateCliente = () => {
     const[rua,setRua] = useState("");
     const[nome,setNome] = useState("");
     const[usuario,setUsuario] = useState("");
-
+   
     useEffect(() =>{
     const getClientes = async () => {
       try{
@@ -58,7 +60,8 @@ export const UpdateCliente = () => {
 
   return (
     <>
-      <h1>Atualizar Cliente</h1>
+      <h2 className="centralizar">Atualizar Cliente <i class="bi bi-arrow-repeat"></i></h2>
+      <div className="meio">
       <Form onSubmit={(e) => atualizar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
@@ -186,12 +189,12 @@ export const UpdateCliente = () => {
                         onChange={(e) =>  {
                         setUsuario(e.target.value);
                         }}       
-                    />
-
-
+                    />   
+          <br></br>
         </Form.Group>
         <Button type="submit">Atualizar</Button>
       </Form>
+      </div>
     </>
   );
 };
