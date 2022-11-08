@@ -32,7 +32,7 @@ export const Cards = () => {
                   <StyleButton
                    padding='8px'
                    width='100px'
-                   variant="success">
+                   >
                     <Link style={{color:'#FFF', textDecoration:'none'}} to={`/DetalheProduto/${produto.id}`}>
                       Comprar
                     </Link>
