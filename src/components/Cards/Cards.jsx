@@ -22,7 +22,7 @@ export const Cards = () => {
           <>
           {produtos.map((produto) => {
             return(
-              <Col key={produto.id} md="6" sm= "12" lg= "4" xl= "4">                              
+              <Col key={produto.id} md="4" sm= "12" lg= "4" xl= "4">                              
               <StyleCard height='500px' width='290px' margintop='80px' marginbottom='30px' textalign='center'>
               <Card.Img variant="top" src={produto.fotoLink} />
                 <Card.Body>
