@@ -63,7 +63,8 @@ export const DeleteCliente = () => {
 
   return (
     <>
-      <h1>Deletar Cliente</h1>
+      <h2 className="centralizar" >Deletar Cliente <i class="bi bi-x-circle"></i></h2>
+      <div className="meio">
       <Form onSubmit={(e) => deletar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
@@ -75,10 +76,12 @@ export const DeleteCliente = () => {
               );
             })}
           </Form.Control>
+          <br></br>
         </Form.Group>
 
         <Button type="submit">Deletar</Button>
       </Form>
+      </div>
     </>
   );
 };

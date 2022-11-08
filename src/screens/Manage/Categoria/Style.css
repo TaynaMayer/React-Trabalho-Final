@@ -1,20 +1,13 @@
-.posicao {
+.centralizar {
     text-align: center;
     padding: 1.1em;
    
 }
 
-.gerenciar {
+.meio {
     padding: 1.2em;
     border: 2px solid rgb(71, 55, 55);
     background-color: #E0E0E0;
-    margin: 25px;
-    
-    
-    
+    margin: 25px;  
 }
 
-/*#root {
-    background-color: #E0E0E0;
-    ;
-}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import './Style.css';
 
 export const CreateProduto = () => {
   const [id, setId] = useState();
@@ -38,8 +39,9 @@ export const CreateProduto = () => {
 
   return (
     <>
-      <h1>Adicionar Produto</h1>
-      <Form onSubmit={(e) => atualizar(e)}>
+      <h2 className="centralizar">Adicionar Produtos <i class="bi bi-plus-circle"></i></h2>
+      <div className="meio">
+      <Form onSubmit={(e) => cadastrar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
             {listaProdutos.map((d) => {
@@ -168,10 +170,11 @@ export const CreateProduto = () => {
                         }}       
                     />
 
-
+          <br></br>               
         </Form.Group>
         <Button type="submit">Cadastrar</Button>
       </Form>
+      </div>
     </>
   );
 };

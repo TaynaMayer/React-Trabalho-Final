@@ -34,6 +34,7 @@ export const CartProvider = ({ children }) => {
         cart.splice(i, 1);
       }
     }
+    setCart([... cart]);
   }
 
   return (

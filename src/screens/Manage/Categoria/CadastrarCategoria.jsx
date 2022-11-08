@@ -22,7 +22,9 @@ export const CreateCategoria = () => {
 
   return (
     <>
-      <h1>Adicionar Categoria</h1>
+      <h2 className="centralizar"> Adicionar Categoria <i class="bi bi-plus-circle"></i></h2>
+      <div className="meio">
+
       <Form onSubmit={(e) => cadastrar(e)}>
         <Form.Group>
           <Form.Label>Descrição</Form.Label>
@@ -40,10 +42,12 @@ export const CreateCategoria = () => {
                     onChange={(e) =>  {
                     setNome(e.target.value);
                     }}       
-                />     
+                />   
+                <br></br>  
         </Form.Group>
         <Button type="submit">Cadastrar</Button>
       </Form>
+      </div>
     </>
   );
 };

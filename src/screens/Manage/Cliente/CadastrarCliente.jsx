@@ -56,7 +56,8 @@ export const CreateCliente = () => {
 
   return (
     <>
-      <h1>Adicionar Cliente</h1>
+      <h2 className="centralizar">Adicionar Cliente <i class="bi bi-plus-circle"></i></h2>
+      <div className="meio">
       <Form onSubmit={(e) => cadastrar(e)}>
         <Form.Group>
           <Form.Label>CPF</Form.Label>
@@ -174,10 +175,11 @@ export const CreateCliente = () => {
                         }}       
                     />
 
-
+            <br></br>            
         </Form.Group>
         <Button type="submit">Cadastrar</Button>
       </Form>
+      </div>
     </>
   );
 };

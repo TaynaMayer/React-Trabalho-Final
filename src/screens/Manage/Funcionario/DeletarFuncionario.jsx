@@ -1,6 +1,7 @@
 import {useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {api} from "../../../api";
+import './Style.css';
 
 
 export const DeleteFuncionario = () => {
@@ -40,7 +41,8 @@ export const DeleteFuncionario = () => {
 
   return (
     <>
-      <h1>Deletar Funcionário</h1>
+      <h2 className="centralizar"> Deletar Funcionário <i class="bi bi-x-circle"></i></h2>
+      <div className="meio">
       <Form onSubmit={(e) => deletar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
@@ -53,9 +55,10 @@ export const DeleteFuncionario = () => {
             })}
           </Form.Control>
         </Form.Group>
-
+          <br></br>
         <Button type="submit">Deletar</Button>
       </Form>
+      </div>
     </>
   );
 };
