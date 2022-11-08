@@ -15,7 +15,7 @@ export const Footer = () => {
 
                         <div className="mt-3 row_footer">
 
-                            <div className="col-md-4 col-lg-2 col-xl-3 mx-auto mb-4">
+                            <div className="col-md-2 col-lg-2 col-xl-3 mx-auto mb-4">
 
                                 <h6 className="text-uppercase fw-bold mb-4">
                                    Ecomserratec

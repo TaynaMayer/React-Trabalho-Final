@@ -20,7 +20,7 @@ export const Header = () => {
     return (
       
       
-        <Col md="8" sm= "12" lg= "12" xl= "12">
+        
         <>        
          <Navbar bg="dark" variant="dark">
           <Container >
@@ -35,6 +35,6 @@ export const Header = () => {
             </Container>
           </Navbar>
         </>
-        </Col>        
+                
     );
 }
