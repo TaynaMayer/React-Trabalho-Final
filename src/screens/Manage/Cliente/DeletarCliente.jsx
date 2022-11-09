@@ -6,19 +6,6 @@ import {api} from "../../../api";
 export const DeleteCliente = () => {
   const [listaClientes, setListaClientes] = useState([]);
   const [id, setId] = useState();
-  const [form,setForm] = useState("");
-  const[cpf,setCPF] = useState("");
-  const[dataNascimento,setDataNascimento] = useState("");
-  const[email,setEmail] = useState("");
-  const[bairro,setBairro] = useState("");
-  const[cep,setCep] = useState("");
-  const[cidade,setCidade] = useState("");
-  const[complemento,setComplemento] = useState("");
-  const[estado,setEstado] = useState("");
-  const[numero,setNumero] = useState("");
-  const[rua,setRua] = useState("");
-  const[nome,setNome] = useState("");
-  const[usuario,setUsuario] = useState("");
   
   
 
@@ -41,20 +28,7 @@ export const DeleteCliente = () => {
       e.preventDefault();
       try {
         api.delete(`/cliente/${id}`, {  
-          cpf,
-          dataNascimento,
-          email,
-          endereco:{
-              bairro,
-              cep, 
-              cidade,
-              complemento,
-              estado,
-              numero,
-              rua
-           },
-           nome,
-           usuario});
+          });
       
       } catch (err) {
         console.log(err);
