@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect,useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
 import './Style.css';
@@ -20,7 +20,7 @@ export const CreateProduto = () => {
   const cadastrar = (e) => {
     e.preventDefault();
     try {
-      api.post("/cliente", {
+      api.post("/produto", {
           dataFabricacao,
           descricao,
           fotoLink,
@@ -42,18 +42,8 @@ export const CreateProduto = () => {
       <h2 className="centralizar">Adicionar Produtos <i class="bi bi-plus-circle"></i></h2>
       <div className="meio">
       <Form onSubmit={(e) => cadastrar(e)}>
-        <Form.Group>
-          <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
-            {listaProdutos.map((d) => {
-              return (
-                <option key={d.id} value={d.id}>
-                  {d.nome}
-                </option> 
-              );
-            })}
-          </Form.Control>
-
-          <Form.Label>Data de Fabricacao</Form.Label>
+        <Form.Group>                      
+            <Form.Label>Data de Fabricacao</Form.Label>
                   <Form.Control
                       value={dataFabricacao}
                       type="date"
@@ -100,57 +90,44 @@ export const CreateProduto = () => {
                         setIdFuncionario(e.target.value);
                         }}       
                     />
-                    <Form.Label>Cidade</Form.Label>
+                    <Form.Label>Quantidade em Estoque</Form.Label>
                     
                     <Form.Control
-                    value={cidade}
-                    type="text"
+                    value={qtdEstoque}
+                    type="number"
                     onChange={(e) =>  {
-                    setCidade(e.target.value);
+                    setQTDEstoque(e.target.value);
                     }}       
                 />
-                    <Form.Label>Complemento</Form.Label>
+                    <Form.Label>Valor</Form.Label>
                     
                     <Form.Control
-                    value={complemento}
-                    type="text"
+                    value={valor}
+                    type="number"
                     onChange={(e) =>  {
-                    setComplemento(e.target.value);
+                    setValor(e.target.value);
                     }}       
                 />
-                 <Form.Label>Estado</Form.Label>
+                 <Form.Label>Nome da Categoria</Form.Label>
                     
                     <Form.Control
-                    value={estado}
+                    value={nomeCategoria}
                     type="text"
                     onChange={(e) =>  {
-                    setEstado(e.target.value);
+                    setNomeCategoria(e.target.value);
                     }}       
                 />
-                <Form.Label>Número</Form.Label>
+                <Form.Label>Nome do Funcionario</Form.Label>
                     
                     <Form.Control
-                    value={numero}
+                    value={nomeFuncionario}
                     type="text"
                     onChange={(e) =>  {
-                    setNumero(e.target.value);
-                    }}       
-                />
-                <Form.Label>Rua</Form.Label>
-                    
-                    <Form.Control
-                    value={rua}
-                    type="text"
-                    onChange={(e) =>  {
-                    setRua(e.target.value);
+                    setNomeFuncionario(e.target.value);
                     }}       
                 />
 
-
-            </Form.Group>
-
-            <Form.Group>
-              <Form.Label>Nome</Form.Label>
+              <Form.Label>Nome do Produto</Form.Label>
                     
                     <Form.Control
                     value={nome}
@@ -159,16 +136,6 @@ export const CreateProduto = () => {
                     setNome(e.target.value);
                     }}       
                 />
-
-              <Form.Label>Usuário</Form.Label>
-                    
-                        <Form.Control
-                        value={usuario}
-                        type="text"
-                        onChange={(e) =>  {
-                        setUsuario(e.target.value);
-                        }}       
-                    />
 
           <br></br>               
         </Form.Group>

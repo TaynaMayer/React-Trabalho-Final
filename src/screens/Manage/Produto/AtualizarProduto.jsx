@@ -69,122 +69,99 @@ export const UpdateProduto = () => {
             })}
           </Form.Control>
 
-          <Form.Label>Data de Fabricacao</Form.Label>
-                  <Form.Control
-                      value={dataFabricacao}
-                      type="date"
-                      onChange={(e) => {
-                        setDataFabricacao(e.target.value);
-                      }}
-                    />
+            <Form.Label>Data de Fabricacao</Form.Label>
+                    <Form.Control
+                        value={dataFabricacao}
+                        type="date"
+                        onChange={(e) => {
+                          setDataFabricacao(e.target.value);
+                        }}
+                      />
 
-                  <Form.Label>Descricao</Form.Label>
-                    <Form.Control
-                        value={descricao}
-                        type="text"
-                        onChange={(e) =>  {
-                        setDescricao(e.target.value);
-                        }}       
-                    />
-                  <Form.Label>Insira o link da foto do produto</Form.Label>
-                    <Form.Control
-                        value={fotoLink}
-                        type="text"
-                        onChange={(e) =>  {
-                        setFotoLink(e.target.value);
-                        }}       
-                    />
-                
-            </Form.Group>
-            <Form.Group>
-                    
-                    <Form.Label>Insira o id da Categoria</Form.Label>
-                    
-                        <Form.Control
-                        value={idCategoria}
-                        type="number"
-                        onChange={(e) =>  {
-                        setIdCategoria(e.target.value);
-                        }}       
-                    />
-                    <Form.Label>Insira o id do Funcionario</Form.Label>
-                    
-                        <Form.Control
-                        value={idFuncionario}
-                        type="number"
-                        onChange={(e) =>  {
-                        setIdFuncionario(e.target.value);
-                        }}       
-                    />
-                    <Form.Label>Cidade</Form.Label>
-                    
-                    <Form.Control
-                    value={cidade}
-                    type="text"
-                    onChange={(e) =>  {
-                    setCidade(e.target.value);
-                    }}       
-                />
-                    <Form.Label>Complemento</Form.Label>
-                    
-                    <Form.Control
-                    value={complemento}
-                    type="text"
-                    onChange={(e) =>  {
-                    setComplemento(e.target.value);
-                    }}       
-                />
-                 <Form.Label>Estado</Form.Label>
-                    
-                    <Form.Control
-                    value={estado}
-                    type="text"
-                    onChange={(e) =>  {
-                    setEstado(e.target.value);
-                    }}       
-                />
-                <Form.Label>Número</Form.Label>
-                    
-                    <Form.Control
-                    value={numero}
-                    type="text"
-                    onChange={(e) =>  {
-                    setNumero(e.target.value);
-                    }}       
-                />
-                <Form.Label>Rua</Form.Label>
-                    
-                    <Form.Control
-                    value={rua}
-                    type="text"
-                    onChange={(e) =>  {
-                    setRua(e.target.value);
-                    }}       
-                />
+                    <Form.Label>Descricao</Form.Label>
+                      <Form.Control
+                          value={descricao}
+                          type="text"
+                          onChange={(e) =>  {
+                          setDescricao(e.target.value);
+                          }}       
+                      />
+                    <Form.Label>Insira o link da foto do produto</Form.Label>
+                      <Form.Control
+                          value={fotoLink}
+                          type="text"
+                          onChange={(e) =>  {
+                          setFotoLink(e.target.value);
+                          }}       
+                      />
+                  
+              </Form.Group>
+              <Form.Group>
+                      
+                      <Form.Label>Insira o id da Categoria</Form.Label>
+                      
+                          <Form.Control
+                          value={idCategoria}
+                          type="number"
+                          onChange={(e) =>  {
+                          setIdCategoria(e.target.value);
+                          }}       
+                      />
+                      <Form.Label>Insira o id do Funcionario</Form.Label>
+                      
+                          <Form.Control
+                          value={idFuncionario}
+                          type="number"
+                          onChange={(e) =>  {
+                          setIdFuncionario(e.target.value);
+                          }}       
+                      />
+                      <Form.Label>Quantidade em Estoque</Form.Label>
+                      
+                      <Form.Control
+                      value={qtdEstoque}
+                      type="number"
+                      onChange={(e) =>  {
+                      setQTDEstoque(e.target.value);
+                      }}       
+                  />
+                      <Form.Label>Valor</Form.Label>
+                      
+                      <Form.Control
+                      value={valor}
+                      type="number"
+                      onChange={(e) =>  {
+                      setValor(e.target.value);
+                      }}       
+                  />
+                  <Form.Label>Nome da Categoria</Form.Label>
+                      
+                      <Form.Control
+                      value={nomeCategoria}
+                      type="text"
+                      onChange={(e) =>  {
+                      setNomeCategoria(e.target.value);
+                      }}       
+                  />
+                  <Form.Label>Nome do Funcionario</Form.Label>
+                      
+                      <Form.Control
+                      value={nomeFuncionario}
+                      type="text"
+                      onChange={(e) =>  {
+                      setNomeFuncionario(e.target.value);
+                      }}       
+                  />
 
-
-            </Form.Group>
-
-            <Form.Group>
-              <Form.Label>Nome</Form.Label>
-                    
-                    <Form.Control
-                    value={nome}
-                    type="text"
-                    onChange={(e) =>  {
-                    setNome(e.target.value);
-                    }}       
-                />
-
-              <Form.Label>Usuário</Form.Label>
-                    
-                        <Form.Control
-                        value={usuario}
-                        type="text"
-                        onChange={(e) =>  {
-                        setUsuario(e.target.value);
-                        }}       
-                    />
+                <Form.Label>Nome do Produto</Form.Label>
+                      
+                      <Form.Control
+                      value={nome}
+                      type="text"
+                      onChange={(e) =>  {
+                      setNome(e.target.value);
+                      }}       
+                  />
 
         <br></br>               
         </Form.Group>
